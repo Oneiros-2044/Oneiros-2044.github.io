@@ -1,0 +1,96 @@
+/*
+NAVIGATION:
+
+#CONTENT:
+    - wrapper for text-content, including an img on the right side
+*/
+
+:root {
+    --charcoal: #2E3738;
+    --blue: #3891A6;
+    --yellow: #FDE74C;
+    --red: #DB5461;
+
+    --dark: #1C2223;
+}
+
+body,html {
+    /* background */
+    background-color: var(--charcoal);
+    /* font */
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+}
+
+section {
+    margin: 0px 0px 100px;
+}
+
+h1, h2, h3 {
+    scroll-margin-top: 100px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+}
+
+h1 {
+    font-size:72px;
+}
+
+h1 span,h2 span{
+    background-color: var(--red)
+}
+
+.navbar {
+    font-weight: bold;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+}
+
+
+/*#CONTENT */
+.content {
+
+    background-color: var(--dark);
+
+    padding: 5px 15px 10px;
+    margin: 15px 0;
+    border-radius: 5px;
+
+    clear:left;
+    overflow:auto;
+    
+}
+
+.about-content {
+    padding: 20px 15px;
+    font-size: 18px;
+}
+
+.content-img {
+    width: 15%;
+    float: right;
+    margin:15px 10px 10px;
+    
+}
+
+a.content-link{
+    text-transform: uppercase;
+}
+
+a.content-link, a.content-link:visited {
+    color: var(--red)
+}
+
+a.content-link:hover {
+    color: white;
+    background-color: var(--red);
+}
+
+.space {
+    margin-top: 100px;
+}
+
