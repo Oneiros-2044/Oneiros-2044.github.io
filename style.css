@@ -42,6 +42,7 @@ body {
     overflow: hidden;
     background-color: var(--charcoal);
     border-radius: 15px;
+    max-width: 1000px;
 
 }
 
@@ -142,10 +143,26 @@ span.bullet {
     word-spacing: 5px;
 }
 
+.form-control {
+    color: var(--main);
+    background-color: var(--dark);
+    border-color: var(--charcoal);
+}
+
 .btn-primary, .btn-primary:hover {
+    border-color: var(--charcoal);
     background-color: var(--main);
     color:white;
 }
+
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+}
+
+
 
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
@@ -156,3 +173,4 @@ span.bullet {
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }
+
