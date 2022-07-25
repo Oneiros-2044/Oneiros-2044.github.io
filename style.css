@@ -90,6 +90,10 @@ a, a:hover, a:active, a:focus, a:visited {
     cursor: pointer;
 }
 
+.topMenu {
+    max-width: 600px;
+}
+
 span {
     line-height: 35px;
 }

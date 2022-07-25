@@ -5,6 +5,7 @@
         <meta name='viewport' content='width=device-width, initial-scale=1.0'>
         <meta http-equiv='X-UA-Compatible' content='ie=edge'>
         <title>Sunny Card</title>
+        <link rel="icon" href="favicon.png" type="image/png">
         
         <!-- Latest compiled and minified CSS -->
         <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css'>
@@ -28,7 +29,7 @@
             </div>
         </nav>
         
-        <div class="container wrapper">
+        <div class="container wrapper topMenu">
             <div class="sidebar-wrapper">
                 <a href="https://github.com/SunnyStays/"><img class="sidebar-img" src="img/Github.png"></a><br>
                 <a href="#"><img class="sidebar-img" src="img/LinkedIn.png"></a><br>
@@ -111,7 +112,7 @@
             </section>
         </div>
 
-        <footer><p style="color:var(--charcoal)">v 1.0.1 - SunnyStays</p></footer>
+        <footer><p style="color:var(--charcoal)">v 1.0.3 - SunnyStays</p></footer>
         <script>
 
             function randInt(range){
@@ -139,9 +140,9 @@
                 var deviceheight = $(window).height();
                 var y = scrolltop / (maxpageheight - deviceheight)
 
-                console.log("maxpageheight: "+maxpageheight+" deviceheight: "+deviceheight)
-                console.log("scrolldistance: "+scrolltop+" percentage of page: "+y)
-                console.log()
+                //console.log("maxpageheight: "+maxpageheight+" deviceheight: "+deviceheight)
+                //console.log("scrolldistance: "+scrolltop+" percentage of page: "+y)
+                //console.log()
 
                 if (y > 0.15) {
                     $('#aboutMe').fadeIn();
@@ -149,13 +150,13 @@
                     $('#aboutMe').fadeOut();
                 }
 
-                if (y > 0.4) {
+                if (y > 0.3) {
                     $('#projects').fadeIn();
                 } else {
                     $('#projects').fadeOut();
                 }
 
-                if (y > 0.7) {
+                if (y > 0.6) {
                     $('#contact').fadeIn();
                 } else {
                     $('#contact').fadeOut();
