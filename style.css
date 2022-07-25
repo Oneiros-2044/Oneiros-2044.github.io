@@ -6,10 +6,12 @@
 
 
 html, body {
+    position:fixed;
+    width: 100%;
     background-color: var(--dark);
     color: var(--main);
     font-family: 'Ubuntu Mono', monospace;
-    height:850px
+    height:1800px
 }
 
 ::selection {
@@ -63,6 +65,23 @@ html, body {
 
 h1 {
     margin:0;
+    font-weight: bold;
+}
+
+h2 {
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+h3 {
+    text-decoration: underline;
+    padding-top:10px;
+    
+}
+
+a, a:hover, a:active, a:focus, a:visited {
+    color: white;
+    cursor: pointer;
 }
 
 span {
@@ -83,11 +102,6 @@ span.title {
     font-weight: bold;
 }
 
-a, a:hover, a:active {
-    color: white;
-    cursor: pointer;
-}
-
 span.title::selection {
     color: var(--main);
     background: white
@@ -106,8 +120,26 @@ span.bullet {
     color: white;
 }
 
+/* content below main card*/
+
 .bottomMenu{
     padding-bottom: 25px;
+    text-align: justify;
+}
+
+.project-content {
+    padding: 0px 10px 5px;
+    border-radius: 5px;
+    background-color: var(--dark);
+}
+
+.link-container {
+    word-spacing: 5px;
+}
+
+.btn-primary, .btn-primary:hover {
+    background-color: var(--main);
+    color:white;
 }
 
 .noselect {

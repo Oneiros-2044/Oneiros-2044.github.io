@@ -30,9 +30,9 @@
         
         <div class="container wrapper">
             <div class="sidebar-wrapper">
-                <a href="https://github.com/SunnyStays/"><img class="sidebar-img" src="Github.png"></a><br>
-                <a href="#"><img class="sidebar-img" src="LinkedIn.png"></a><br>
-                <a href="#"><img class="sidebar-img" src="twitter.png" style="height:35px"></a><br>
+                <a href="https://github.com/SunnyStays/"><img class="sidebar-img" src="img/Github.png"></a><br>
+                <a href="#"><img class="sidebar-img" src="img/LinkedIn.png"></a><br>
+                <a href="#"><img class="sidebar-img" src="img/twitter.png" style="height:35px"></a><br>
             </div>
             <div class="content-wrapper">
                 <span class="top">Hello I am</span><br>
@@ -43,11 +43,70 @@
         </div>
 
         <div class="container wrapper bottomMenu" id="aboutMe">
-            <h2>About me</h2>
-            <section>
-                I'm Sunny and I am a 19 year old Webdeveloper with a  background in computer science and business. <br><br>
-                I am mostly self-taught, having only learnt the basics of python in high-school. For the last few years I have been teaching myself different technologies, ultimately landing at webdevelopment. I am fluent in Python, HTML, CSS and Javascript and I have experience with bootstrap as well as React. <br><br>
-                In my free time I make music or visual arts, which I have also taught myself. I would call myself creative, being able to quickly find a solution to most problems I encounter. <br> 
+            <h2>★ About me</h2>
+            <section class="mb-4">
+                I'm Sunny and I am a 19 year old Webdeveloper with a  background in working in IT and business. <br><br>
+                I am mostly self-taught in Python, HTML, CSS and Javascript and I have experience with bootstrap as well as React. Still,  I am very interested in learning more technologies to make working on my projects better, quicker and more enjoyable. <br><br>
+                In my free time I make music or and I have dabbled in visual arts (3D-Modelling mostly), which I have also taught myself. I am very creative, being able to quickly find a solution to most problems I encounter. <br> 
+            </section>
+        </div>
+
+        <div class="container wrapper bottomMenu" id="projects">
+            <h2>★ My Projects</h2>
+            <section class="mb-4">
+                <div class="project-content">
+                <h3>Simple Todo List</h3>
+                    <p>A simple ToDo-List using local storage to save the values (since I think it was simpler than using cookies). <br> You can add tasks and remove them and tick them off, though there is currently not functionality to save the ticking. Future plans are to improve the styling of the website and add more functionalities.</p>                    
+                    <div class="link-container"><a href="https://sunnystays.github.io/todoList/">Link</a> <a href="https://github.com/SunnyStays/todoList">Github</a></div>
+                </div>
+
+                <div class="project-content">
+                <h3>Worlde Clone</h3>
+                    <p>A clone of the web-game Worlde, made in 4 hours. <br> Every win and loss is tracked and saved on your computer using local storage. In future styling could be expanded to show used up letters and statistics could give more information about wins. </p>
+                    <div class="link-container"><a href="https://sunnystays.github.io/wordle-clone/">Link</a> <a href="https://github.com/SunnyStays/wordle-clone">Github</a></div>
+                </div>
+
+                <div class="project-content">
+                    <h3>Portfolio Page</h3>
+                        <p>This page, which I made completely from scratch, including styling and code. <br> This site uses simple bootstrap as well as some jquery functionalities, just to make it more presentable and quicker to code</p>                    
+                        <div class="link-container"><a href="https://sunnystays.github.io/">Link</a> <a href="https://github.com/SunnyStays/Sunnystays.github.io">Github</a></div>
+                    </div>
+            </section>
+        </div>
+
+        <div class="container wrapper bottomMenu" id="contact">
+            <h2>★ Contact</h2>
+                <section class="mb-4">
+                    <p class="text-center w-responsive mx-auto mb-5">If you have any questions or offers, feel free to send me a message and I will come back to you as soon as possible.</p>
+                    <div class="row">
+                
+                        <div class="col-md-9 mb-md-0 mb-5">
+                            <form id="contact-form" name="contact-form">
+                                <div class="row">
+
+                                    <div class="col-md-5">
+                                        <div class="md-form mb-0">
+                                            <input type="text" id="name" name="name" class="form-control">
+                                            <label for="name" class="">Your name</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-5">
+                                        <div class="md-form mb-0">
+                                            <input type="text" id="email" name="email" class="form-control">
+                                            <label for="email" class="">Your email</label>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-2">
+                                        <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
+                                    </div>
+                                </div>
+                            </form>
+                                
+
+                        </div>
+                    </div>
             </section>
         </div>
 
@@ -58,9 +117,9 @@
             }
 
             function changeColor(){
-                var red = randInt(105)+150
-                var green = randInt(105)+150
-                var blue = randInt(105)+150
+                var red = randInt(100)+130
+                var green = randInt(100)+100
+                var blue = randInt(100)+100
                 console.log(red,green,blue)
 
                 let root = document.documentElement;
@@ -69,6 +128,8 @@
             }
 
             $('#aboutMe').fadeOut(0);
+            $('#projects').fadeOut(0);
+            $('#contact').fadeOut(0);
 
             $(document).scroll(function() {
                 var y = $(this).scrollTop();
@@ -77,7 +138,19 @@
                 } else {
                     $('#aboutMe').fadeOut();
                 }
-                });
+
+                if (y > 250) {
+                    $('#projects').fadeIn();
+                } else {
+                    $('#projects').fadeOut();
+                }
+
+                if (y > 800) {
+                    $('#contact').fadeIn();
+                } else {
+                    $('#contact').fadeOut();
+                }
+            });
 
             changeColor()
         </script>
