@@ -9,6 +9,7 @@ html, body {
     background-color: var(--dark);
     color: var(--main);
     font-family: 'Ubuntu Mono', monospace;
+    height:850px
 }
 
 ::selection {
@@ -19,14 +20,21 @@ html, body {
 
 .navbar-container {
     font-size: 30px;
+    text-align: center;
 }
+
+.sticky {
+    position: sticky;
+    top: 0;
+}
+
 
 .wrapper {
     margin-top:50px;
     overflow: hidden;
     background-color: var(--charcoal);
     border-radius: 15px;
-    width:600px
+    width:600px;
 
 }
 
@@ -50,14 +58,21 @@ html, body {
 .content-wrapper {
     overflow: hidden;
     width: 400px;
+    padding-top: 25px;
+}
+
+h1 {
+    margin:0;
 }
 
 span {
     line-height: 35px;
 }
+
 span.top {
     font-size:20px;
     font-weight: bold;
+    
 }
 
 span.title {
@@ -68,7 +83,7 @@ span.title {
     font-weight: bold;
 }
 
-span a, span a:hover, span a:active {
+a, a:hover, a:active {
     color: white;
     cursor: pointer;
 }
@@ -91,6 +106,9 @@ span.bullet {
     color: white;
 }
 
+.bottomMenu{
+    padding-bottom: 25px;
+}
 
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */

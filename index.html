@@ -22,35 +22,62 @@
     </head>
         
     <body>
-        <nav class='navbar navbar-inverse'>
+        <nav class='navbar navbar-inverse sticky'>
             <div class='container-fluid navbar-container'>
-                <ul class='nav navbar-nav'>
-                    <li><a href='index.html'>☀</a></li>
-                </ul>
+                <a href='https://sunnystays.github.io/'>☀</a>
             </div>
         </nav>
         
         <div class="container wrapper">
             <div class="sidebar-wrapper">
-                <a href="#"><img class="sidebar-img" src="Github.png"></a><br>
+                <a href="https://github.com/SunnyStays/"><img class="sidebar-img" src="Github.png"></a><br>
                 <a href="#"><img class="sidebar-img" src="LinkedIn.png"></a><br>
                 <a href="#"><img class="sidebar-img" src="twitter.png" style="height:35px"></a><br>
             </div>
             <div class="content-wrapper">
                 <span class="top">Hello I am</span><br>
-                <span class="title"><a onclick="changeColor()" class="noselect">Sunny</a></span><br>
+                <h1><span class="title"><a onclick="changeColor()" class="noselect">Sunny</a></span></h1>
                 <span class="job">and I create Websites</span><br>
                 <span class="description"> Frontend Webdev <span class="bullet">•</span> Programmer <span class="bullet">•</span> Software Enginneer</span>
             </div>
         </div>
 
-        <script>
-            function changeColor(){
-                // From http://stackoverflow.com/a/5365036/2065702
-                const randomColor = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
+        <div class="container wrapper bottomMenu" id="aboutMe">
+            <h2>About me</h2>
+            <section>
+                I'm Sunny and I am a 19 year old Webdeveloper with a  background in computer science and business. <br><br>
+                I am mostly self-taught, having only learnt the basics of python in high-school. For the last few years I have been teaching myself different technologies, ultimately landing at webdevelopment. I am fluent in Python, HTML, CSS and Javascript and I have experience with bootstrap as well as React. <br><br>
+                In my free time I make music or visual arts, which I have also taught myself. I would call myself creative, being able to quickly find a solution to most problems I encounter. <br> 
+            </section>
+        </div>
 
-                document.documentElement.style.setProperty('--main', randomColor);
+        <script>
+
+            function randInt(range){
+                return Math.floor(Math.random()*range);
             }
+
+            function changeColor(){
+                var red = randInt(105)+150
+                var green = randInt(105)+150
+                var blue = randInt(105)+150
+                console.log(red,green,blue)
+
+                let root = document.documentElement;
+
+                root.style.setProperty('--main','rgb('+red+', '+green+', '+blue+')');
+            }
+
+            $('#aboutMe').fadeOut(0);
+
+            $(document).scroll(function() {
+                var y = $(this).scrollTop();
+                if (y > 50) {
+                    $('#aboutMe').fadeIn();
+                } else {
+                    $('#aboutMe').fadeOut();
+                }
+                });
 
             changeColor()
         </script>
