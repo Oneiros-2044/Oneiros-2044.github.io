@@ -10,8 +10,14 @@ html, body {
     color: var(--main);
     font-family: 'Ubuntu Mono', monospace;
     height:1800px;
+    
+}
+
+body {
     overflow: scroll;
     -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 ::selection {
