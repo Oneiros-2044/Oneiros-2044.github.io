@@ -4,7 +4,7 @@
         <meta charset='UTF-8'>
         <meta name='viewport' content='width=device-width, initial-scale=1.0'>
         <meta http-equiv='X-UA-Compatible' content='ie=edge'>
-        <title>Oneiros-2044</title>
+        <title>Sunny Card</title>
         
         <!-- Latest compiled and minified CSS -->
         <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css'>
@@ -13,128 +13,46 @@
         <!-- Latest compiled JavaScript -->
         <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js'></script>
 
-        <!-- Font -->
+        <!-- fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
 
         <link rel='stylesheet' href='style.css'>
     </head>
         
     <body>
-        <!--navbar-->
-        <nav class='navbar navbar-inverse sticky sticky-top'>
-            <div class='container-fluid'>
+        <nav class='navbar navbar-inverse'>
+            <div class='container-fluid navbar-container'>
                 <ul class='nav navbar-nav'>
-                    <li><a href='#home'>HOME</a></li>
-                    <li><a href='#about'>ABOUT ME</a></li>
-                    <li><a href='#projects'>MY PROJECTS</a></li>
-                    <li><a href='#contact'>CONTACT</a></li>
+                    <li><a href='index.html'>☀</a></li>
                 </ul>
             </div>
         </nav>
-
-        <div class="container">
-            <section>
-                <h1 id="home"><span>       ONEIROS::2044   </span></h1>
-            </section>
-
-            <section>
-                <h2 id="about"><span>     ABOUT ME        </span></h2>
-                <div class="content about-content">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt facilis est adipisci, repellendus error accusantium, repudiandae perspiciatis tempore ex itaque magni dolore nobis debitis sequi reiciendis iste, aut voluptates quam.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi mollitia, vero similique maxime nostrum aliquid dolores commodi quae, autem quisquam eius, sed eligendi asperiores esse ad ullam inventore provident quis!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam delectus excepturi asperiores esse magnam consequuntur similique alias omnis ad optio at quidem perferendis sunt, quos in cupiditate voluptatum maxime consectetur.
-                    <br><br>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi repellat eveniet est officia accusamus accusantium sed molestiae cum nobis, dolore maxime voluptates corporis odio iure, debitis eaque aliquid cumque iste.
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio quis suscipit numquam voluptatum tempore modi esse maiores aliquid officiis, placeat dolorum nihil reiciendis optio molestiae eaque et deserunt itaque nesciunt.
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi commodi officiis corrupti at sit alias ad optio. Recusandae saepe, quisquam, exercitationem alias sint vero fugiat vitae animi soluta atque commodi?
-                </div>
-            </section>
-
-            <section>
-                <h2 id="projects"><span>  MY PROJECTS     </span></h2>
-
-                <div class="content">
-                    <img class=content-img src="img.png">
-                    <h3>Simple Todo List</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis dolore excepturi, illo accusamus nam, minus mollitia quo fugiat sunt dolorum dicta minima ipsam, illum magnam incidunt nesciunt aut dolores culpa!</p>                    
-                    <a class="content-link" href="#">Github</a>
-                </div>
-                
-                <div class="content">
-                    <img class=content-img src="img.png">
-                    <h3>Worlde Clone</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima atque nulla hic, fugiat ipsum velit commodi libero aut ab doloremque laudantium, aliquam nam culpa mollitia harum, maxime pariatur sapiente voluptatum!</p>
-                    <a class="content-link" href="#">Github</a>
-                </div>
-                
-                <div class="content">
-                    <img class=content-img src="img.png">
-                    <h3>Worlde Clone</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima atque nulla hic, fugiat ipsum velit commodi libero aut ab doloremque laudantium, aliquam nam culpa mollitia harum, maxime pariatur sapiente voluptatum!</p>
-                    <a class="content-link" href="#">Github</a>
-                </div>
-            </section>
-            
-            <section>
-                <h2 id="contact"><span>   CONTACT         </span></h2>
-                <div class="space"></div>
-            </section>
-
-        </div>
         
-        <!-- <script src='scripts.js'></script> -->
-   
+        <div class="container wrapper">
+            <div class="sidebar-wrapper">
+                <a href="#"><img class="sidebar-img" src="Github.png"></a><br>
+                <a href="#"><img class="sidebar-img" src="LinkedIn.png"></a><br>
+                <a href="#"><img class="sidebar-img" src="twitter.png" style="height:35px"></a><br>
+            </div>
+            <div class="content-wrapper">
+                <span class="top">Hello I am</span><br>
+                <span class="title"><a onclick="changeColor()" class="noselect">Sunny</a></span><br>
+                <span class="job">and I create Websites</span><br>
+                <span class="description"> Frontend Webdev <span class="bullet">•</span> Programmer <span class="bullet">•</span> Software Enginneer</span>
+            </div>
+        </div>
+
+        <script>
+            function changeColor(){
+                // From http://stackoverflow.com/a/5365036/2065702
+                const randomColor = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
+
+                document.documentElement.style.setProperty('--main', randomColor);
+            }
+
+            changeColor()
+        </script>
     </body>
 </html>
-
-<!-- Design
-             _______________________________________________
-            |_ONEIROS::2044_|_ABOUT_ME_|_PROJECTS_|_CONTACT_|
-
-            #ONEIROS::2044
-             ___________________
-            |                   |  . This page is a landing page
-            |   ONEIROS::2044   |  . lorem ipsum sit dolor amed 
-            |___________________|  . lorem ipsum lorem ipsum sit
-
-            ##ABOUT ME
-
-            Hi, I'm a webdev etcetcetc... lorem ipsum
-            basically a text in which I say a bunch of words
-            that describe every other section of this site
-            (from technologies I use to projects I did to work experience)
-            A bit of advertising I guess. Need to write a good text for that
-            maybe a few cool catchphrases as well B)
-
-            Also put some links in here like github, linkedin, etc.
-
-            ##PROJECTS
-             _______________________________________________
-            | EXAMPLE PROJECT:                             |
-            | Description of this project that states some |
-            | fun facts about the project, like what I     |
-            | learned or whats so cool about this...       |
-            |______Link_____________________Github_________|
-             _______________________________________________
-            | EXAMPLE PROJECT:                             |
-            | Description of this project that states some |
-            | fun facts about the project, like what I     |
-            | learned or whats so cool about this...       |
-            |______Link_____________________Github_________| 
-            
-            ... > (dedicated projects page TODO)
-
-            ##CONTACT
-
-            Contact form (so I dont have to put my email on webpage which is bad for SEO)
-             __________________     __________________
-            |Name______________|   |Email-Adress______|
-             ______________________________________________
-            |                                              |
-            |         Message...                           |
-            |______________________________________________|
-
-            
-        -->
