@@ -9,7 +9,9 @@ html, body {
     background-color: var(--dark);
     color: var(--main);
     font-family: 'Ubuntu Mono', monospace;
-    height:1800px
+    height:1800px;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
 }
 
 ::selection {
@@ -30,11 +32,10 @@ html, body {
 
 
 .wrapper {
-    margin-top:50px;
+    margin-top:20px;
     overflow: hidden;
     background-color: var(--charcoal);
     border-radius: 15px;
-    width:600px;
 
 }
 

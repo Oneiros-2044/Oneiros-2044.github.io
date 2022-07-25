@@ -132,20 +132,28 @@
             $('#contact').fadeOut(0);
 
             $(document).scroll(function() {
-                var y = $(this).scrollTop();
-                if (y > 50) {
+                var scrolltop = $(this).scrollTop();
+                var maxpageheight = $(this).height();
+                var deviceheight = $(window).height();
+                var y = scrolltop / (maxpageheight - deviceheight)
+
+                console.log("maxpageheight: "+maxpageheight+" deviceheight: "+deviceheight)
+                console.log("scrolldistance: "+scrolltop+" percentage of page: "+y)
+                console.log()
+
+                if (y > 0.15) {
                     $('#aboutMe').fadeIn();
                 } else {
                     $('#aboutMe').fadeOut();
                 }
 
-                if (y > 250) {
+                if (y > 0.5) {
                     $('#projects').fadeIn();
                 } else {
                     $('#projects').fadeOut();
                 }
 
-                if (y > 800) {
+                if (y > 0.8) {
                     $('#contact').fadeIn();
                 } else {
                     $('#contact').fadeOut();
