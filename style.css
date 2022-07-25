@@ -6,8 +6,6 @@
 
 
 html, body {
-    position:fixed;
-    width: 100%;
     background-color: var(--dark);
     color: var(--main);
     font-family: 'Ubuntu Mono', monospace;
