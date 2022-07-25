@@ -1,6 +1,6 @@
 :root {
     --charcoal: #424242;
-    --main: #f83aa2;
+    --main: #ffffff;
     --dark: #202020;
 }
 
@@ -164,9 +164,9 @@ span.bullet {
 footer {
     position: fixed;
     bottom: 0;
+    width:100%;
+    padding: 0px 25px
 }
-
-
 
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
