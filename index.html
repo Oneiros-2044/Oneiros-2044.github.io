@@ -86,31 +86,36 @@
         <div class="container wrapper bottomMenu" id="contact">
             <h2>★ Contact</h2>
                 <section class="mb-4">
-                    <p class="text-center w-responsive mx-auto mb-5">If you have any questions or offers, feel free to send me a message and I will come back to you as soon as possible. Please also note this sites <a href="privacy.html">privacy policy</a>.</p>
+                    <p class="text-center w-responsive mx-auto mb-5">If you have any questions or offers, feel free to send me a message and I will come back to you as soon as possible.</p>
+                    <br>
+
                     <div class="row">
-                
-                        <div class="col-md-9 mb-md-0 mb-5">
-                            <form id="contact-form" name="contact-form">
+                        <div class="col-md-12 mb-md-0 mb-5">
+                            <form id="contact-form" name="contact-form" onsubmit="submitContact()">
                                 <div class="row">
 
-                                    <div class="col-md-5">
+                                    <div class="col-md-4">
                                         <div class="md-form mb-0">
-                                            <input type="text" id="name" name="name" class="form-control">
+                                            <input type="text" id="name" name="name" class="form-control" required>
                                             <label for="name" class="">Your name</label>
                                         </div>
                                     </div>
 
-                                    <div class="col-md-5">
+                                    <div class="col-md-4">
                                         <div class="md-form mb-0">
-                                            <input type="text" id="email" name="email" class="form-control">
+                                            <input type="text" id="email" name="email" class="form-control" required>
                                             <label for="email" class="">Your email</label>
                                         </div>
-                                    </div>
-                                    
-                                    <div class="col-md-2">
-                                        <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
+                                    </div>    
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label for="privacy">I accept the terms and conditions and the saving and processing of my data according to this websites <a href="privacy.html">privacy policy</a></label>
+                                        <input type="checkbox" id="privacy" name="privacy" required>
                                     </div>
                                 </div>
+                                    <input type="submit" class="btn btn-primary" value="Submit contact">
                             </form>
                                 
 
@@ -123,7 +128,7 @@
         <!-- FOOTER -->
 
         <footer>
-            <div style="float:left;"><p style="color:var(--charcoal)">v 1.0.7 - SunnyStays </p></div>
+            <div style="float:left;"><p style="color:var(--charcoal)">v 1.0.8 - SunnyStays </p></div>
             <div style="float:right;"><a href="privacy.html">privacy policy</a></div>
         </footer>
 
@@ -145,6 +150,15 @@
                 let root = document.documentElement;
 
                 root.style.setProperty('--main','rgb('+red+', '+green+', '+blue+')');
+            }
+
+            function submitContact(){
+                let checked = document.querySelector('#privacy:checked') !== null;
+                console.log(checked);
+
+                if (checked){
+                    document.getElementById('contact-form').submit();
+                }
             }
 
             $('#aboutMe').fadeOut(0);
