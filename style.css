@@ -83,7 +83,7 @@ a, a:hover, a:active, a:focus, a:visited {
     cursor: pointer;
 }
 
-.topMenu {
+.top-menu {
     max-width: 600px;
 }
 
@@ -125,7 +125,7 @@ span.bullet {
 
 /* content below main card*/
 
-.bottomMenu{
+.bottom-menu{
     padding-bottom: 25px;
     text-align: justify;
 }
@@ -171,4 +171,3 @@ footer {
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }
-
