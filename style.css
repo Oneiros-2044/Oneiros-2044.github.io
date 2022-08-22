@@ -10,7 +10,7 @@ html, body {
     color: var(--main);
     font-family: 'Ubuntu Mono', monospace;
     height:1800px;
-    
+    transition: all 0.1s ease-in;
 }
 
 body {
@@ -22,7 +22,11 @@ body {
 
 ::selection {
     color: white;
-    background: var(--main)
+    background: var(--main);
+}
+
+.navbar {
+    background-color: var(--dark);
 }
 
 
@@ -103,6 +107,7 @@ span.title {
     font-size: 50px;
     line-height: 55px;
     font-weight: bold;
+    transition: all 0.1s ease-in;
 }
 
 span.title::selection {
