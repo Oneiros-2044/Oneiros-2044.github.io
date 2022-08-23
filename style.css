@@ -2,6 +2,8 @@
     --charcoal: #424242;
     --main: #ffffff;
     --dark: #202020;
+
+    --time: 0.2s
 }
 
 
@@ -10,7 +12,7 @@ html, body {
     color: var(--main);
     font-family: 'Ubuntu Mono', monospace;
     height:1800px;
-    transition: all 0.1s ease-in;
+    transition: all var(--time) ease-in;
 }
 
 body {
@@ -60,9 +62,19 @@ body {
     margin: 0px 10px;
 }
 
+img {
+    border-radius: 5px;
+    padding: 5px;
+}
+
+img:hover {
+    
+    background-color: var(--main);
+}
+
 .sidebar-img {
-    width:40px;
-    height:40px;
+    width:50px;
+    height:50px;
     margin-bottom:25px;
 }
 
@@ -104,10 +116,12 @@ span.top {
 span.title {
     color:white;
     background-color: var(--main);
+    border-radius: 4px;
+    padding:2px;
     font-size: 50px;
     line-height: 55px;
     font-weight: bold;
-    transition: all 0.1s ease-in;
+    transition: all var(--time) ease-in;
 }
 
 span.title::selection {
@@ -168,8 +182,8 @@ footer {
 }
 
 .contact-img {
-    width: 50px;
-    height: 50px; 
+    width: 60px;
+    height: 60px; 
     margin: 15px 15px;
 }
 
