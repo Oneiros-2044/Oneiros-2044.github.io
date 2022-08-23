@@ -25,7 +25,7 @@
     <body>
         <nav class='navbar navbar-inverse sticky'>
             <div class='container-fluid navbar-container'>
-                <a href='https://sunnystays.github.io/'><img src="img/sun.png" style="width:40px"></a></a>
+                <a href='https://sunnystays.github.io/'><img src="img/sun.png" style="width:40px" alt="Sunnystays Website"></a>
             </div>
         </nav>
         
@@ -63,19 +63,22 @@
                 <p class="text-center">Here is a short list of some of my hobby projects I have worked on</p>
                 <div class="project-content">
                 <h3>Gradient generator</h3>
-                <p>A gradient generator taking in two color input values and coloring a varying amount of boxes <br> Boxes can be dynamically added and removed, changing steps of the gradient. The gradient automatically updates when elements are added, removed or colors are changed. There is a max and min amount of boxes (between 1 and 64)</p>                   
+                <p>A gradient generator taking in two color input values and coloring a varying amount of boxes</p>
+                <p>Boxes can be dynamically added and removed, changing steps of the gradient. The gradient automatically updates when elements are added, removed or colors are changed. There is a max and min amount of boxes (between 1 and 64)</p>                   
                     <div class="link-container"><a href="https://sunnystays.github.io/gradientApp/">Link</a> <a href="https://github.com/SunnyStays/gradientApp">Github</a></div>
                 </div>
 
                 <div class="project-content">
                     <h3>Worlde Clone</h3>
-                    <p>A clone of the web-game Worlde, made in 4 hours. <br> Every win and loss is tracked and saved on your computer using local storage. In future styling could be expanded to show used up letters and statistics could give more information about wins. </p>
+                    <p>A clone of the web-game Worlde, made in 4 hours.</p>
+                    <p> Every win and loss is tracked and saved on your computer using local storage. In future styling could be expanded to show used up letters and statistics could give more information about wins. </p>
                     <div class="link-container"><a href="https://sunnystays.github.io/wordle-clone/">Link</a> <a href="https://github.com/SunnyStays/wordle-clone">Github</a></div>
                 </div>
                 
                 <div class="project-content">
                     <h3>Portfolio Page</h3>
-                    <p>This page, which I made completely from scratch, including styling and code. <br> This site uses simple bootstrap as well as some jquery functionalities, just to make it more presentable and quicker to code</p>                    
+                    <p>This page, which I made completely from scratch, including styling and code.</p>
+                    <p> This site uses simple bootstrap as well as some jquery functionalities, just to make it more presentable and quicker to code</p>                    
                     <div class="link-container"><a href="https://sunnystays.github.io/">Link</a> <a href="https://github.com/SunnyStays/Sunnystays.github.io">Github</a></div>
                 </div>
 
@@ -101,7 +104,7 @@
         <!-- FOOTER -->
 
         <footer>
-            <div style="float:left;"><p style="color:var(--charcoal)">v 1.0.19 - SunnyStays </p></div>
+            <div style="float:left;"><p style="color:var(--charcoal)">v 1.0.20 - SunnyStays </p></div>
             <!--div style="float:right;"><a href="privacy.html">privacy policy</a></div>-->
         </footer>
 
@@ -168,6 +171,8 @@
             });
 
             changeColor()
+
+            setInterval(function(){changeColor()}, 15000)
         </script>
     </body>
 </html>
