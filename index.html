@@ -144,31 +144,31 @@
                 let scrolltop = $(this).scrollTop();
                 let maxpageheight = $(this).height();
                 let deviceheight = $(window).height();
-                let y = Math.floor(scrolltop / (maxpageheight - deviceheight)*10) / 10
+                let y = Math.floor(scrolltop / (maxpageheight - deviceheight)*20) / 20
 
                 //console.log("maxpageheight: "+maxpageheight+" deviceheight: "+deviceheight)
                 //console.log("scrolldistance: "+scrolltop+" percentage of page: "+y)
                 //console.log()
 
-                if (y > 0.05) {
+                if (y > 0.15) {
                     $('#aboutMe').fadeIn();
-                } else {
+                } if (y < 0.05) {
                     $('#aboutMe').fadeOut();
                 }
 
                 if (y > 0.25) {
                     $('#projects').fadeIn();
-                } else {
+                } if (y < 0.15) {
                     $('#projects').fadeOut();
                 }
 
                 if (y > 0.75) {
                     $('#contact').fadeIn();
-                } else {
+                } if (y < 0.65) {
                     $('#contact').fadeOut();
                 }
 
-                $("#scrolldistance").text(y)
+                $("#scrolldistance").text(y.toFixed(2))
             });
 
             changeColor()
