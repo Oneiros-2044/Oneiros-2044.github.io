@@ -69,6 +69,13 @@
                 </div>
 
                 <div class="project-content">
+                    <h3>Todo List</h3>
+                    <p>A simple Todo list, where you can add, remove, and check-off todos</p>
+                    <p>Data is saved in local storage and uses jquery to update list entries on adding/removing/reloading the page.</p>                    
+                    <div class="link-container"><a href="https://sunnystays.github.io/">Link</a> <a href="https://sunnystays.github.io/todoApp/">Github</a></div>
+                </div>
+
+                <div class="project-content">
                     <h3>Worlde Clone</h3>
                     <p>A clone of the web-game Worlde, made in 4 hours.</p>
                     <p> Every win and loss is tracked and saved on your computer using local storage. In future styling could be expanded to show used up letters and statistics could give more information about wins. </p>
@@ -126,15 +133,6 @@
                 let root = document.documentElement;
 
                 root.style.setProperty('--main','rgb('+red+', '+green+', '+blue+')');
-            }
-
-            function submitContact(){
-                let checked = document.querySelector('#privacy:checked') !== null;
-                console.log(checked);
-
-                if (checked){
-                    document.getElementById('contact-form').submit();
-                }
             }
 
             $('#aboutMe').fadeOut(0);
