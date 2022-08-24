@@ -72,7 +72,7 @@
                     <h3>Todo List</h3>
                     <p>A simple Todo list, where you can add, remove, and check-off todos</p>
                     <p>Data is saved in local storage and uses jquery to update list entries on adding/removing/reloading the page.</p>                    
-                    <div class="link-container"><a href="https://sunnystays.github.io/todoApp/">Link</a> <a href="https://github.com/SunnyStays/todoApp">Github</a></div>
+                    <div class="link-container"><a href="https://sunnystays.github.io/">Link</a> <a href="https://sunnystays.github.io/todoApp/">Github</a></div>
                 </div>
 
                 <div class="project-content">
@@ -110,8 +110,9 @@
         
         <!-- FOOTER -->
 
-        <footer>
-            <div style="float:left;"><p style="color:var(--charcoal)">v 1.0.22 - SunnyStays </p></div>
+        <footer style="color:var(--charcoal)">
+            <div style="float:left;"><p>v 1.0.22 - SunnyStays </p></div>
+            <div style="float:right" id="scrolldistance"></div>
             <!--div style="float:right;"><a href="privacy.html">privacy policy</a></div>-->
         </footer>
 
@@ -125,9 +126,9 @@
             }
 
             function changeColor(){
-                var red = randInt(150)+100
-                var green = randInt(100)+100
-                var blue = randInt(150)+100
+                let red = randInt(150)+100
+                let green = randInt(100)+100
+                let blue = randInt(150)+100
                 //console.log(red,green,blue)
 
                 let root = document.documentElement;
@@ -140,22 +141,22 @@
             $('#contact').fadeOut(0);
 
             $(document).scroll(function() {
-                var scrolltop = $(this).scrollTop();
-                var maxpageheight = $(this).height();
-                var deviceheight = $(window).height();
-                var y = scrolltop / (maxpageheight - deviceheight)
+                let scrolltop = $(this).scrollTop();
+                let maxpageheight = $(this).height();
+                let deviceheight = $(window).height();
+                let y = Math.floor(scrolltop / (maxpageheight - deviceheight)*10) / 10
 
                 //console.log("maxpageheight: "+maxpageheight+" deviceheight: "+deviceheight)
                 //console.log("scrolldistance: "+scrolltop+" percentage of page: "+y)
                 //console.log()
 
-                if (y > 0.15) {
+                if (y > 0.05) {
                     $('#aboutMe').fadeIn();
                 } else {
                     $('#aboutMe').fadeOut();
                 }
 
-                if (y > 0.3) {
+                if (y > 0.25) {
                     $('#projects').fadeIn();
                 } else {
                     $('#projects').fadeOut();
@@ -166,6 +167,8 @@
                 } else {
                     $('#contact').fadeOut();
                 }
+
+                $("#scrolldistance").text(y)
             });
 
             changeColor()
