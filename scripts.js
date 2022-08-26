@@ -31,7 +31,7 @@ $(document).scroll(function() {
     //console.log("scrolldistance: "+scrolltop+" percentage of page: "+y)
     //console.log()
 
-    if (y > 0.15) {
+    if (y > 0) {
         $('#aboutMe').fadeIn();
     } if (y < 0.05) {
         $('#aboutMe').fadeOut();

@@ -3,6 +3,7 @@
     --lightened:#474747;
     --main: #ffffff;
     --dark: #1b1b1b;
+    --lessdark: #202020;
 
     --time: 0.2s
 }
@@ -50,7 +51,7 @@ body {
     overflow: hidden;
     background-color: var(--charcoal);
     border-radius: 15px;
-    max-width: 1000px;
+    max-width: 900px;
 }
 
 .flex-container {
@@ -89,13 +90,18 @@ h2 {
     padding-left: 10px;
     text-align: center;
     text-transform: lowercase;
+    cursor:default;
+}
+
+h2:hover {
+    text-decoration: underline;
 }
 
 h3 {
     text-decoration: underline;
     padding-top:10px;
     text-transform: lowercase;
-    
+    cursor:default;
 }
 
 a, a:hover, a:active, a:focus, a:visited {
@@ -158,6 +164,10 @@ span.bullet {
     text-align: justify;
 }
 
+.section-container {
+    margin: auto 25px;
+}
+
 .skills-container {
     flex-flow: row wrap;
     align-items: center;
@@ -205,6 +215,11 @@ break {
     padding: 0px 10px 5px;
     border-radius: 5px;
     background-color: var(--dark);
+    transition: background-color 0.2s;
+}
+
+.project-content:hover {
+    background-color: var(--lessdark);
 }
 
 .link-container {
