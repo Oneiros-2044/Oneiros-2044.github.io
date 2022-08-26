@@ -45,11 +45,11 @@
                     
                 </div>
             </div>
-            <span><p class="text-center" style="color:white;font-size:x-small">★ scroll down ★</p></span>
+            <span><p class="text-center small-text">★ scroll down ★</p></span>
         </div>
 
         <div class="container wrapper bottom-menu" id="aboutMe">
-            <h2 id="about">★ About me</h2>
+            <h2 id="about">about me</h2>
             <section class="mb-4">
                 Hi I'm Sunny! I am a front-end webdeveloper from Brandenburg, Germany.<br><br>
                 I create websites and designs, having taught myself webdevelopment in late highschool. My skillset includes HTML5, CSS3, Javascript and Python as well as React, Bootstrap and some jQuery. Apart from that I also have experience in project management, content management (including CMS) and some marketing as well as design experience.<br><br>
@@ -57,35 +57,49 @@
             </section>
         </div>
 
-        <div class="container wrapper bottom-menu" id="projects">
-            <h2 id="projects">★ My Projects</h2>
+        <div class="container wrapper bottom-menu" id="mySkills">
+            <h2 id="skills">my skills</h2>
             <section class="mb-4">
-                <p class="text-center">Here is a short list of some of my hobby projects I have worked on</p>
+                <div class="flex-container skills-container">
+                    <div class="skills-item">HTML 5</div> <div class="skills-item">CSS 3</div> <div class="skills-item">JavaScript</div> <div class="skills-item">Python</div>
+                    <break></break>
+                    <div class="skills-item">Bootstrap</div><div class="skills-item">ReactJS</div><div class="skills-item">NodeJs</div><div class="skills-item">jQuery</div>
+                    <break></break>
+                    <div class="skills-item">Figma</div><div class="skills-item">Adobe Premiere Pro</div><div class="skills-item">Blender</div>
+                    <div class="skills-text small-text">★ more to come ★</div>
+                </div>
+            </section>
+        </div>
+
+        <div class="container wrapper bottom-menu" id="projects">
+            <h2 id="projects">my Projects</h2>
+            <section class="mb-4">
+                <p class="text-center">here is a short list of my most recent hobby projects</p>
                 <div class="project-content">
-                <h3>Gradient generator</h3>
+                <h3>gradient generator</h3>
                 <p>A gradient generator taking in two color input values and coloring a varying amount of boxes</p>
-                <p>Boxes can be dynamically added and removed, changing steps of the gradient. The gradient automatically updates when elements are added, removed or colors are changed. There is a max and min amount of boxes (between 1 and 64)</p>                   
+                <p>Boxes can be dynamically added and removed, changing steps of the gradient. The gradient automatically updates when elements are added, removed or colors are changed. There is a max and min amount of boxes (between 1 and 64) and gradient colors can be picked by clicking them.</p>                   
                     <div class="link-container"><a href="https://sunnystays.github.io/gradientApp/">Link</a> <a href="https://github.com/SunnyStays/gradientApp">Github</a></div>
                 </div>
 
                 <div class="project-content">
-                    <h3>Todo List</h3>
+                    <h3>todo List</h3>
                     <p>A simple Todo list, where you can add, remove, and check-off todos</p>
                     <p>Data is saved in local storage and uses jquery to update list entries on adding/removing/reloading the page.</p>                    
                     <div class="link-container"><a href="https://sunnystays.github.io/todoApp">Link</a> <a href="https://github.com/SunnyStays/todoApp">Github</a></div>
                 </div>
 
                 <div class="project-content">
-                    <h3>Worlde Clone</h3>
+                    <h3>worlde Clone</h3>
                     <p>A clone of the web-game Worlde, made in 4 hours.</p>
                     <p> Every win and loss is tracked and saved on your computer using local storage. In future styling could be expanded to show used up letters and statistics could give more information about wins. </p>
                     <div class="link-container"><a href="https://sunnystays.github.io/wordle-clone/">Link</a> <a href="https://github.com/SunnyStays/wordle-clone">Github</a></div>
                 </div>
                 
                 <div class="project-content">
-                    <h3>Portfolio Page</h3>
+                    <h3>portfolio Page</h3>
                     <p>This page, which I made completely from scratch, including styling and code.</p>
-                    <p> This site uses simple bootstrap as well as some jquery functionalities, just to make it more presentable and quicker to code</p>                    
+                    <p> This site uses simple bootstrap as well as some jquery scripts to fadeIn/fadeOut content and automatically change color every 15s. <br> (tip: click my name on the top of the page)</p>                    
                     <div class="link-container"><a href="https://sunnystays.github.io/">Link</a> <a href="https://github.com/SunnyStays/Sunnystays.github.io">Github</a></div>
                 </div>
 
@@ -94,7 +108,7 @@
 
             
         <div class="container wrapper bottom-menu" id="contact">
-            <h2 id="contact">★ Contact</h2>
+            <h2 id="contact">contact</h2>
             <section class="text-center w-responsive mx-auto mb-5 lead">
                 <p>If you have any questions or offers, feel free to send me a message!</p>
                 
@@ -110,9 +124,9 @@
         
         <!-- FOOTER -->
 
-        <footer style="color:var(--charcoal)">
-            <div style="float:left;"><p>v 1.0.22 - SunnyStays </p></div>
-            <div style="float:right" id="scrolldistance"></div>
+        <footer style="color:var(--lightened)">
+            <div style="float:left;"><span>v 1.0.22 - SunnyStays </span></div>
+            <div style="float:right;"><span id="changedColor">0</span> <span id="scrolldistance">0.0</span></div>
             <!--div style="float:right;"><a href="privacy.html">privacy policy</a></div>-->
         </footer>
 

@@ -1,5 +1,6 @@
 :root {
     --charcoal: #292929;
+    --lightened:#474747;
     --main: #ffffff;
     --dark: #1b1b1b;
 
@@ -11,7 +12,7 @@ html, body {
     background-color: var(--dark);
     color: var(--main);
     font-family: 'Ubuntu Mono', monospace;
-    height:2000px;
+    height:2100px;
     transition: all var(--time) ease-in;
 }
 
@@ -86,11 +87,14 @@ h1 {
 h2 {
     font-weight: bold;
     padding-left: 10px;
+    text-align: center;
+    text-transform: lowercase;
 }
 
 h3 {
     text-decoration: underline;
     padding-top:10px;
+    text-transform: lowercase;
     
 }
 
@@ -142,11 +146,59 @@ span.bullet {
     color: white;
 }
 
+.small-text {
+    color:white;
+    font-size:smaller;
+}
+
 /* content below main card*/
 
 .bottom-menu{
     padding-bottom: 25px;
     text-align: justify;
+}
+
+.skills-container {
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+
+    width:75%;
+
+    margin: auto;
+    padding: 0;
+}
+
+.skills-item {
+    border: solid var(--main) 3px;
+    border-radius: 4px;
+
+    margin: 5px;
+    padding: 5px 15px;
+
+    font-size: large;
+    color:var(--main);
+
+    transition: background-color 0.1s;
+}
+
+.skills-item:hover {
+    color: white;
+    background-color: var(--main);
+    
+}
+
+.skills-text {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0 0;
+}
+
+break {
+    flex-basis: 100%;
+    width: 0px; 
+    height: 0px; 
+    overflow: hidden;
 }
 
 .project-content {
@@ -171,20 +223,26 @@ span.bullet {
     color:white;
 }
 
-
-
-footer {
-    position: fixed;
-    bottom: 0;
-    width:100%;
-    padding: 0px 25px;
-    background-color: var(--dark);
-}
-
 .contact-img {
     width: 60px;
     height: 60px; 
     margin: 15px 15px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+
+    background-color: var(--dark);
+
+    width:100%;
+    height:30px;
+    
+    padding: 0px 25px;
+
+    font-size:small;
+    
+    overflow:hidden;
 }
 
 .noselect {

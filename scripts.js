@@ -1,4 +1,3 @@
-
 function randInt(range){
     return Math.floor(Math.random()*range);
 }
@@ -12,9 +11,13 @@ function changeColor(){
     let root = document.documentElement;
 
     root.style.setProperty('--main','rgb('+red+', '+green+', '+blue+')');
+    $("#changedColor").text(rgb2hex(getComputedStyle(document.documentElement).getPropertyValue('--main')))
 }
 
+const rgb2hex = (rgb) => `#${rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/).slice(1).map(n => parseInt(n, 10).toString(16).padStart(2, '0')).join('')}`
+
 $('#aboutMe').fadeOut(0);
+$('#mySkills').fadeOut(0);
 $('#projects').fadeOut(0);
 $('#contact').fadeOut(0);
 
@@ -34,9 +37,15 @@ $(document).scroll(function() {
         $('#aboutMe').fadeOut();
     }
 
-    if (y > 0.25) {
+    if (y > 0.20) {
+        $('#mySkills').fadeIn();
+    } if (y < 0.10) {
+        $('#mySkills').fadeOut();
+    }
+
+    if (y > 0.35) {
         $('#projects').fadeIn();
-    } if (y < 0.15) {
+    } if (y < 0.35) {
         $('#projects').fadeOut();
     }
 
@@ -48,6 +57,7 @@ $(document).scroll(function() {
 
     $("#scrolldistance").text(y.toFixed(2))
 });
+
 
 changeColor()
 
