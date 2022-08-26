@@ -188,6 +188,7 @@ span.bullet {
 
     font-size: large;
     color:var(--main);
+    cursor: default;
 
     transition: background-color 0.1s;
 }
