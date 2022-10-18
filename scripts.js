@@ -64,12 +64,13 @@ setInterval(function(){changeColor()}, 15000)
 
 setInterval(function(){
     let time = '#'+(
-        Math.floor(Date.now()/1000)%3600)
+        Math.floor(Date.now()/1000)%16777216)
             .toString(16)
             .split('').map(function(v) {
-                return v + 0;
+                return v
               })
             .join('')
-
+            
     $('#hex-time').text( time ).css('background-color',time)
+    console.log( time )
 }, 1000)
