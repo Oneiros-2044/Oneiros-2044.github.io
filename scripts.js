@@ -37,21 +37,21 @@ $(document).scroll(function() {
         $('#aboutMe').fadeOut();
     }
 
-    if (y > 0.20) {
+    if (y > 0.30) {
         $('#mySkills').fadeIn();
-    } if (y < 0.10) {
+    } if (y < 0.20) {
         $('#mySkills').fadeOut();
     }
 
-    if (y > 0.35) {
+    if (y > 0.55) {
         $('#projects').fadeIn();
-    } if (y < 0.35) {
+    } if (y < 0.45) {
         $('#projects').fadeOut();
     }
 
-    if (y > 0.75) {
+    if (y > 0.80) {
         $('#contact').fadeIn();
-    } if (y < 0.65) {
+    } if (y < 0.70) {
         $('#contact').fadeOut();
     }
 
@@ -72,5 +72,5 @@ setInterval(function(){
             .join('')
             
     $('#hex-time').text( time ).css('background-color',time)
-    console.log( time )
+    //console.log( time )
 }, 1000)
