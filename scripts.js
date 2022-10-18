@@ -49,9 +49,9 @@ $(document).scroll(function() {
         $('#projects').fadeOut();
     }
 
-    if (y > 0.80) {
+    if (y > 0.90) {
         $('#contact').fadeIn();
-    } if (y < 0.70) {
+    } if (y < 0.80) {
         $('#contact').fadeOut();
     }
 
