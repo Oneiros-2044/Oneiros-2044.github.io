@@ -227,6 +227,24 @@ break {
     word-spacing: 5px;
 }
 
+.hex-time-container {
+    display: flex;
+    justify-content: center;
+}
+
+.hex-time {
+    display: inline-block;
+
+    font-size: 30px;
+    line-height: 30px;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 5px;
+
+    background-color: var(--main);
+    color:var(--dark)
+}
+
 .form-control {
     color: var(--main);
     background-color: var(--dark);
