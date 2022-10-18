@@ -58,7 +58,18 @@ $(document).scroll(function() {
     $("#scrolldistance").text(y.toFixed(2))
 });
 
-
 changeColor()
 
 setInterval(function(){changeColor()}, 15000)
+
+setInterval(function(){
+    let time = '#'+(
+        Math.floor(Date.now()/1000)%3600)
+            .toString(16)
+            .split('').map(function(v) {
+                return v + 0;
+              })
+            .join('')
+
+    $('#hex-time').text( time ).css('background-color',time)
+}, 1000)
