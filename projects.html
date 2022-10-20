@@ -30,6 +30,14 @@
         </script>
         
         <link rel='stylesheet' href='style.css'>
+        <style>
+            html, body {
+                height:100%;
+            }
+            .bottom {
+                height: 50px;
+            }
+        </style>
     </head>
         
     <body>
@@ -43,6 +51,13 @@
             <h2>Vue</h2>
             <section class="mb-4 section-container">
                 <p class="text-center"> </p>
+
+                <div class="project-content">
+                    <h3>Todo-List 2.0</h3>
+                    <p>A kanban-board style todo-list made in Vue.</p>
+                    <p>Includes, drag and drop to sort the lists and automatically saves new/moved items in local storage so your new entries wont be lost on reload.</p>
+                    <div class="link-container"><a href="https://sunnystays.github.io/vueKanban" target="_blank">Link</a> <a href="https://github.com/SunnyStays/vueKanban" target="_blank">Github</a></div>
+                </div>
 
                 <div class="project-content">
                     <h3>hex-time</h3>
@@ -60,8 +75,8 @@
                 <p class="text-center"></p>
                 <div class="project-content">
                 <h3>gradient generator</h3>
-                <p>A gradient generator taking in two color input values and coloring a varying amount of boxes</p>
-                <p>Boxes can be dynamically added and removed, changing steps of the gradient. The gradient automatically updates when elements are added, removed or colors are changed. There is a max and min amount of boxes (between 1 and 64) and gradient colors can be picked by clicking them.</p>                   
+                    <p>A gradient generator taking in two color input values and coloring a varying amount of boxes</p>
+                    <p>Boxes can be dynamically added and removed, changing steps of the gradient. The gradient automatically updates when elements are added, removed or colors are changed. There is a max and min amount of boxes (between 1 and 64) and gradient colors can be picked by clicking them.</p>                   
                     <div class="link-container"><a href="https://sunnystays.github.io/gradientApp/" target="_blank">Link</a> <a href="https://github.com/SunnyStays/gradientApp" target="_blank">Github</a></div>
                 </div>
 
@@ -88,7 +103,7 @@
 
             </section>
         </div>
-               
+        <div class="bottom"></div>
         <!-- FOOTER -->
 
         <footer style="color:var(--lightened)">
