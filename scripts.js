@@ -25,9 +25,9 @@ $(document).scroll(function() {
         $('#mySkills').fadeOut();
     }
 
-    if (y > 0.55) {
+    if (y > 0.45) {
         $('#projects').fadeIn();
-    } if (y < 0.45) {
+    } if (y < 0.35) {
         $('#projects').fadeOut();
     }
 
