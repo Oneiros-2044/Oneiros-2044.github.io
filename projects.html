@@ -37,6 +37,23 @@
             .bottom {
                 height: 50px;
             }
+
+            .project-content-wrapper{
+                display: flex;
+            }
+
+            .project-content-item {
+                padding-right: 15px;
+            }
+
+            .project-content-item img {
+                height:100px;
+            }
+
+            .hex-time-container, .hex-time {
+                width: 100px;
+                font-size: 26px;
+            }
         </style>
     </head>
         
@@ -50,21 +67,34 @@
         <div class="container wrapper bottom-menu">
             <h2>Vue</h2>
             <section class="mb-4 section-container">
-                <p class="text-center"> </p>
 
                 <div class="project-content">
-                    <h3>Todo-List 2.0</h3>
-                    <p>A kanban-board style todo-list made in Vue.</p>
-                    <p>Includes, drag and drop to sort the lists and automatically saves new/moved items in local storage so your new entries wont be lost on reload.</p>
+                    <h3>vue kanban-board</h3>
+                    <div class="project-content-wrapper">
+                        <div class='project-content-item'>
+                            <p>A kanban-board style todo-list made in Vue.</p>
+                            <p>Includes, drag and drop to sort the lists and automatically saves new/moved items in local storage so your new entries wont be lost on reload.</p>   
+                        </div>
+                        <div class='project-content-item'>
+                            <img src='./img/projects/todo2.png' class='noHover'>  
+                        </div>
+                    </div>              
                     <div class="link-container"><a href="https://sunnystays.github.io/vueKanban" target="_blank">Link</a> <a href="https://github.com/SunnyStays/vueKanban" target="_blank">Github</a></div>
                 </div>
 
                 <div class="project-content">
                     <h3>hex-time</h3>
-                    <p>Nothing fancy, just my own take on hex-time. For every second that passes, the color is increased by #000001</p>
-                    <p>Check out my <a href="https://sunnystays.github.io/vueClock" target="_blank">vueClock</a> for a similar project.</p>
-                    <div class="hex-time-container"><span class="hex-time" id="hex-time">#000000</span></div>                   
+                    <div class="project-content-wrapper">
+                        <div class='project-content-item'>
+                            <p>Nothing fancy, just my own take on hex-time. For every second that passes, the color is increased by #000001</p>
+                            <p>Check out my <a href="https://sunnystays.github.io/vueClock" target="_blank">vueClock</a> for a similar project.</p>
+                        </div>
+                        <div class='project-content-item'>
+                            <div class="hex-time-container"><span class="hex-time" id="hex-time">#000000</span></div>  
+                        </div>
+                    </div>              
                 </div>
+
 
             </section>
         </div>
@@ -72,34 +102,65 @@
         <div class="container wrapper bottom-menu">
             <h2>miscellaneous projects</h2>
             <section class="mb-4 section-container">
-                <p class="text-center"></p>
+
                 <div class="project-content">
-                <h3>gradient generator</h3>
-                    <p>A gradient generator taking in two color input values and coloring a varying amount of boxes</p>
-                    <p>Boxes can be dynamically added and removed, changing steps of the gradient. The gradient automatically updates when elements are added, removed or colors are changed. There is a max and min amount of boxes (between 1 and 64) and gradient colors can be picked by clicking them.</p>                   
+                    <h3>gradient generator</h3>
+                    <div class="project-content-wrapper">
+                        <div class='project-content-item'>
+                            <p>A gradient generator taking in two color input values and coloring a varying amount of boxes</p>
+                            <p>Boxes can be dynamically added and removed, changing steps of the gradient. The gradient automatically updates when elements are added, removed or colors are changed. There is a max and min amount of boxes (between 1 and 64) and gradient colors can be picked by clicking them.</p>   
+                        </div>
+                        <div class='project-content-item'>
+                            <img src='./img/projects/gradient.png' class='noHover'>  
+                        </div>
+                    </div>              
                     <div class="link-container"><a href="https://sunnystays.github.io/gradientApp/" target="_blank">Link</a> <a href="https://github.com/SunnyStays/gradientApp" target="_blank">Github</a></div>
                 </div>
 
                 <div class="project-content">
-                    <h3>todo List</h3>
-                    <p>A simple Todo list, where you can add, remove, and check-off todos</p>
-                    <p>Data is saved in local storage and uses jquery to update list entries on adding/removing/reloading the page.</p>                    
-                    <div class="link-container"><a href="https://sunnystays.github.io/todoApp" target="_blank">Link</a> <a href="https://github.com/SunnyStays/todoApp" target="_blank">Github</a></div>
+                    <h3>todo list</h3>
+                    <div class="project-content-wrapper">
+                        <div class='project-content-item'>
+                            <p>A simple Todo list, where you can add, remove, and check-off todos</p>
+                            <p>Data is saved in local storage and uses jquery to update list entries on adding/removing/reloading the page. For a newer edition see my vue-todo-list</p>   
+                        </div>
+                        <div class='project-content-item'>
+                            <img src='./img/projects/todo1.png' class='noHover'>  
+                        </div>
+                    </div>              
+                    <div class="link-container"><a href="https://sunnystays.github.io/todoApp/" target="_blank">Link</a> <a href="https://github.com/SunnyStays/todoApp" target="_blank">Github</a></div>
                 </div>
 
                 <div class="project-content">
-                    <h3>worlde Clone</h3>
-                    <p>A clone of the web-game Worlde, made in 4 hours.</p>
-                    <p> Every win and loss is tracked and saved on your computer using local storage. In future styling could be expanded to show used up letters and statistics could give more information about wins. </p>
+                    <h3>worlde clone</h3>
+                    <div class="project-content-wrapper">
+                        <div class='project-content-item'>
+                            <p>A clone of the web-game Worlde, made in 4 hours.</p>
+                            <p>Every win and loss is tracked and saved on your computer using local storage. In future styling could be expanded to show used up letters and statistics could give more information about wins.</p>   
+                        </div>
+                        <div class='project-content-item'>
+                            <img src='./img/projects/wordle.png' class='noHover'>  
+                        </div>
+                    </div>              
                     <div class="link-container"><a href="https://sunnystays.github.io/wordle-clone/" target="_blank">Link</a> <a href="https://github.com/SunnyStays/wordle-clone" target="_blank">Github</a></div>
                 </div>
-                
+
                 <div class="project-content">
-                    <h3>portfolio Page</h3>
-                    <p>This page, which I made completely from scratch, including styling and code.</p>
-                    <p> This site uses simple bootstrap as well as some jquery scripts to fadeIn/fadeOut content and automatically change color every 15s. <br> (tip: click my name on the top of the page)</p>                    
-                    <div class="link-container"><a href="https://sunnystays.github.io/" target="_blank">Link</a> <a href="https://github.com/SunnyStays/Sunnystays.github.io" target="_blank">Github</a></div>
+                    <h3>portfolio page</h3>
+                    <div class="project-content-wrapper">
+                        <div class='project-content-item'>
+                            <p>This page, which I made completely from scratch, including styling and code.</p>
+                            <p>This site uses simple bootstrap as well as some jquery scripts to fadeIn/fadeOut content and automatically change color every 15s.
+                                (tip: click my name on the top of the page)</p>   
+                        </div>
+                        <div class='project-content-item'>
+                            <img src='./img/sun.png' class='noHover'>  
+                        </div>
+                    </div>              
+                    <div class="link-container"><a href="https://sunnystays.github.io/" target="_blank">Link</a> <a href="https://github.com/SunnyStays/sunnystays.github.io" target="_blank">Github</a></div>
                 </div>
+                
+                
 
             </section>
         </div>
@@ -107,7 +168,7 @@
         <!-- FOOTER -->
 
         <footer style="color:var(--lightened)">
-            <div style="float:right;"><span id="changedColor" style="color:var(--main)">0</span> <span id="scrolldistance">0.0</span></div>
+            <div style="float:right;"><span id="changedColor" style="color:var(--main)">0</span></div>
             <!--div style="float:right;"><a href="privacy.html">privacy policy</a></div>-->
         </footer>
 
