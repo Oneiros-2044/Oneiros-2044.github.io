@@ -238,6 +238,13 @@ break {
     height:100px;
 }
 
+@media screen and (max-device-width: 500px) and (orientation: portrait){
+    .project-content-item img {
+        display: none;
+    }
+}
+    
+
 .link-container {
     word-spacing: 5px;
 }
